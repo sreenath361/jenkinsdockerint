@@ -15,7 +15,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "k8sb06cluster"
+    bucket = "aws-ebs-testing"
     key    = "dev.tfstate"
     region = "us-east-1"
   }
@@ -26,7 +26,7 @@ resource "aws_vpc" "default" {
     enable_dns_hostnames = true
     tags = {
         Name = "${var.vpc_name}"
-	Owner = "Sreeharsha Veerapalli"
+	Owner = "Sreenath Reddy"
 	environment = "${var.environment}"
     }
 }
