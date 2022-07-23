@@ -15,7 +15,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "aws-ebs-testing"
+    bucket = "terraform-packer-testing"
     key    = "dev.tfstate"
     region = "us-east-1"
   }
